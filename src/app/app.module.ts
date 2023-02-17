@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from "@angular/common/http";
+import { TaskiliciousComponent } from './components/taskilicious/taskilicious.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TaskiliciousComponent
   ],
   imports: [
     BrowserModule,

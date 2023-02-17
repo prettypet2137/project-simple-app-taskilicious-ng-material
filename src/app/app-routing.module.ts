@@ -1,8 +1,26 @@
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { TaskiliciousComponent } from './components/taskilicious/taskilicious.component';
+
+
+const routes: Routes = [
+  {
+    path: '',
+    component: TaskiliciousComponent,
+    pathMatch: 'full'
+  },
+  // Fallback when no prior routes is matched
+  { path: '**', redirectTo: '/', pathMatch: 'full' }
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot([])],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes, {
+      useHash: true,
+      relativeLinkResolution: 'legacy'
+    })
+  ],
+  exports: [RouterModule],
+  providers: []
 })
 export class AppRoutingModule { }
