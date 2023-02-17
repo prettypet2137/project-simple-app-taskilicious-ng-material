@@ -2,12 +2,13 @@
     <h1>Welcome to Taskilicious!</h1>
     <h2>Choose a category</h2>
     
-    <ul class="list-group">
+    <ul class="list-group nobull">
         <li
             class="list-group-item"
             *ngFor="let category of categories"
         >
             {{ category.name }}
+            <mat-icon class="small" [routerLink]="['categories/edit/'+category.id]">edit</mat-icon>
         </li>
     </ul>
     

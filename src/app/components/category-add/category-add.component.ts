@@ -28,7 +28,6 @@ export class CategoryAddComponent implements OnInit {
       this.categoryService.create(this.categoryForm.value)
         .subscribe({
           next: (res) => {
-            debugger;
             this.router.navigateByUrl('/user');
           },
           error: (e) => console.error(e)
