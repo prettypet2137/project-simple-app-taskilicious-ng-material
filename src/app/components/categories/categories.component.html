@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>Welcome to Taskilicious!</h1>
+    <h2>Choose a category</h2>
+    
+    <ul class="list-group">
+        <li
+            class="list-group-item"
+            *ngFor="let category of categories"
+        >
+            {{ category.name }}
+        </li>
+    </ul>
+    
+    <button class="btn" mat-fab extended [routerLink]="['categories/create']">
+        <mat-icon>add</mat-icon>
+    </button>
+</div>

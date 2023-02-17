@@ -1,0 +1,17 @@
+<div class="container">
+
+    <h1>Create Category</h1>
+
+    <form class="example-form" [formGroup]="categoryForm" (ngSubmit)="onSubmit()">
+        <p>
+            <mat-form-field class="example-full-width">
+                <mat-label>Name</mat-label>
+                <input matInput required placeholder="Name" formControlName="name">
+            </mat-form-field>
+        </p>
+        <p>
+            <button class="btn" mat-raised-button color="primary" type="submit">Create</button>
+        </p>
+    </form>
+
+</div>

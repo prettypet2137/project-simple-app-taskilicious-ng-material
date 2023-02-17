@@ -1,14 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { TaskiliciousComponent } from './components/taskilicious/taskilicious.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { CategoryAddComponent } from './components/category-add/category-add.component';
 
 
 const routes: Routes = [
-  {
-    path: '',
-    component: TaskiliciousComponent,
-    pathMatch: 'full'
-  },
+  { path: '', component: CategoriesComponent, pathMatch: 'full' },
+  { path: 'categories/create', component: CategoryAddComponent },
   // Fallback when no prior routes is matched
   { path: '**', redirectTo: '/', pathMatch: 'full' }
 ];
